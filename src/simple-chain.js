@@ -15,6 +15,7 @@ const chainMaker = {
   },
   removeLink(position) {
     if(!Number.isInteger(position) || typeof position !== 'number' || this.arr[position - 1] === undefined){
+      this.arr = [];
       throw new NotImplementedError(`You can\'t remove incorrect link!`);
     }
     else {
