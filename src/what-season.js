@@ -15,7 +15,7 @@ function getSeason(date) {
   //throw new NotImplementedError('Not implemented');
   if (arguments.length === 0)
     return 'Unable to determine the time of year!'
-  if (!Date.parse(date) && !isNaN(Date.parse(date))){
+  if (Date.parse(date) && !isNaN(Date.parse(date)) && date instanceof Date){
     let Month = date.getMonth();
     if (1 < Month && Month < 5)
       return 'spring'
@@ -26,7 +26,8 @@ function getSeason(date) {
     else
       return 'winter'
   }
-  throw new NotImplementedError('Invalid date!')
+  else
+    throw new Error('Invalid date!')
 }
 
 module.exports = {

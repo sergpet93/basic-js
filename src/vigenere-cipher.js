@@ -28,7 +28,7 @@ class VigenereCipheringMachine {
     //throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
     if(!str || !key)
-      throw new NotImplementedError('Incorrect arguments!');
+      throw new Error('Incorrect arguments!');
     let result = '';
     str = str.toUpperCase();
     key = key.toUpperCase();
@@ -52,7 +52,7 @@ class VigenereCipheringMachine {
     //throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
     if(!str || !key)
-      throw new NotImplementedError('Incorrect arguments!');
+      throw new Error('Incorrect arguments!');
     let result = '';
     str = str.toUpperCase();
     key = key.toUpperCase();
