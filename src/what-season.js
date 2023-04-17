@@ -15,7 +15,7 @@ function getSeason(date) {
   //throw new NotImplementedError('Not implemented');
   if (arguments.length === 0)
     return 'Unable to determine the time of year!'
-  if (Date.parse(date) && !isNaN(Date.parse(date)) && date instanceof Date){
+  if (Date.parse(date) && !isNaN(Date.parse(date)) && Object.getOwnPropertyNames(date).length === 0){
     let Month = date.getMonth();
     if (1 < Month && Month < 5)
       return 'spring'
